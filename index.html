@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EasyRide | Home</title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      min-height: 100vh;
+      color: #000;
+      position: relative;
+    }
+
+    /* Light fade overlay */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.6);
+      z-index: 0;
+    }
+
+    body > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #2ecc71;
+      backdrop-filter: blur(8px);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 2;
+    }
+
+    .navbar a {
+      color: #f8f9fa;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 15px;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+
+    .navbar a:hover {
+      background-color: rgba(255, 255, 255, 0.25);
+      transform: scale(1.05);
+      color: #f8f9fa;
+    }
+
+    /* Container */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 0 20px;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    /* Blur box */
+    .blur-box {
+      background: rgba(255, 255, 255, 0.35);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 30px 20px;
+      max-width: 800px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center content horizontally */
+    }
+
+    .logo-top {
+      width: 350px;
+      margin-bottom: 15px;
+    }
+
+    /* Buttons */
+    .btn {
+      display: flex; /* Make it a flex item for proper centering */
+      justify-content: center;
+      align-items: center;
+      background-color: #2e7d32;
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      transition: 0.3s;
+      cursor: pointer;
+      margin: 10px 0;
+      width: 200px; /* Optional fixed width for consistency */
+    }
+
+    .btn:hover {
+      background-color: #1b5e20;
+    }
+
+    /* Heading */
+    .heading {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin: 20px 0;
+      color: #000;
+    }
+
+    /* Paragraphs */
+    .statement {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin: 15px 0;
+      line-height: 1.6;
+      color: #000;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .logo-top {
+        width: 250px;
+      }
+      .heading {
+        font-size: 2rem;
+      }
+      .statement {
+        font-size: 1rem;
+      }
+      .btn {
+        width: 150px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <a class="brand" href="../index.html">EasyRide</a>
+    <div>
+      <a href="modules/login/login&registrion.php">Login</a>
+    </div>
+  </nav>
+    <br><br><br><br><br><br>
+  <div class="container">
+    <div class="blur-box">
+      <img src="logo.png" alt="EasyRide Logo" class="logo-top">
+
+      <a href="modules/login/login&registrion.php" class="btn">
+        Reserve Now!
+      </a>
+
+      <h2 class="heading">
+        Welcome to EasyRide!
+      </h2>
+
+      <p class="statement">
+        We help passengers book jeepney rides online in an easy and convenient way. No more long lines, just choose your route, book a ride, and go!
+      </p>
+
+      <p class="statement">
+        We are a group of IT students who made EasyRide Booking (Jeepney) to make commuting easier for everyone. Our goal is to help passengers save time and make jeepney rides more organized using technology.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
